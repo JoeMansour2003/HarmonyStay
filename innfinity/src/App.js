@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import './HotelsList';
+import HotelsList from './HotelsList';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
        <p>
         <h1> Welcome to Innfinity!</h1>
        </p>
+       <HotelsList></HotelsList>
       </header>
     </div>
   );
