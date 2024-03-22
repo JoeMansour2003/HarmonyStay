@@ -1,38 +1,105 @@
+body {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #000205;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start; 
+  background: radial-gradient(circle, rgba(34, 34, 34, 1) 0%, rgba(0, 0, 0, 1) 100%);
   color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+
+.title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main-content {
+  margin-top: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.App-logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.App-logo:hover {
+  animation: spin 7s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); } /* Start rotation at 0 degrees */
+  100% { transform: rotate(360deg); } /* End rotation at 360 degrees (1 full rotation) */
+}
+
+
+.image-content {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .main-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-content,
+  .title-container {
+    margin: 10vw 1vw 1vw 1vw;
+    text-align: left; 
+  }
+
+  .image-content {
+    flex: 0;
+  }
+
+}
+
+
+
+body {
+  --sb-track-color: #212121;
+  --sb-thumb-color: #5f1bfd;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
   }
 }

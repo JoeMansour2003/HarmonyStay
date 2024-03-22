@@ -1,17 +1,21 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import './HotelsList';
+import './navbar.css';
 import HotelsList from './HotelsList';
+import Home from './Home';
+import Navbar from './Navbar';
+import About from './about.js';
+import Title from './title.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <p>
-        <h1> Welcome to Innfinity!</h1>
-       </p>
-       <HotelsList></HotelsList>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Home />
+      </div>
+    </Router>
   );
 }
 
