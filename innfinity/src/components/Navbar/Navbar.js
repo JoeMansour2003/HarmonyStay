@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../Home.js'; 
+import './pages/about.js'; 
 
 function Navbar() {
     return (
@@ -12,9 +14,6 @@ function Navbar() {
                 </NavLink>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" activeClassName="active" to="/Hotels">Our Hotels</NavLink>
-                        </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="active" to="/about">About Us</NavLink>
                         </li>

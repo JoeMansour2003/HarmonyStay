@@ -1,19 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import './navbar.css';
-import HotelsList from './HotelsList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar.js';
 import Home from './Home';
-import Navbar from './Navbar';
-import About from './about.js';
-import Title from './title.js';
+import About from './About.js';
+import Hotels from './Hotels.js';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/hotels" element={<Hotels/>} />
+        </Routes>
       </div>
     </Router>
   );
