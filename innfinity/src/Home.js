@@ -9,14 +9,11 @@ import HotelsList from './HotelsList.js';
 
 function Home() {
     return (
-      <div>
+      <div className="main-content">
         <div className="title-container">
           <Image/>
           <Title text={"WELCOME TO"} line={"INNFINITY."}/>
 
-        </div>
-        <div className="main-content">
-          <HotelsList/>
         </div>
       </div>
 
