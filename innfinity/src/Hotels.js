@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Section from './components/section';
-import BigSection from './components/bigsection';
+// import Section from './components/section';
+// import BigSection from './components/bigsection';
 import HotelsList from './HotelsList';
 
 

@@ -5,7 +5,7 @@ import './index.css';
 import './App.css';
 import Title from './title.js';
 import Image from './mainimage.js';
-import HotelsList from './HotelsList.js';
+// import HotelsList from './HotelsList.js';
 
 function Home() {
     return (

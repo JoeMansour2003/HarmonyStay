@@ -4,6 +4,7 @@ import Navbar from './Navbar.js';
 import Home from './Home';
 import About from './About.js';
 import Hotels from './Hotels.js';
+import Footer from './Footer.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/hotels" element={<Hotels/>} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
