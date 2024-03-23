@@ -136,10 +136,10 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: #4c834c;
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #608dfd;
+  background-color: #538a53;
 }
 .section-title {
   margin-bottom: 70px;
@@ -167,7 +167,7 @@ hr {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #45614d;
+  background-color: #467252;
   background-image: linear-gradient(to right, #528f63 0%, rgb(76, 116, 87) 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
@@ -177,6 +177,7 @@ hr {
   border-radius: 25px;
   transition: all 0.5s linear;
   border: 0;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.466);
 }
 .btn-custom:hover,
 .btn-custom:focus,
@@ -185,7 +186,7 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: rgb(42, 77, 53);
+  background-color: #389651;
 }
 .btn:active,
 .btn.active {
