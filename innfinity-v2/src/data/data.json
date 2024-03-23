@@ -1,0 +1,208 @@
+{
+  "Header": {
+    "title": "WELCOME TO INNFINITY"
+  },
+  "About": {
+    "paragraph": "At InnFinity, we pride ourselves on offering an unparalleled selection of luxury hotels across North America. With a portfolio spanning five of the most esteemed hotel chains, including Royal Luxe, Serene Haven, Opulent Towers, Majestic Retreats, and Elite Paradigm, we provide discerning travelers with a diverse range of opulent accommodations to choose from. With properties located in 14 exquisite destinations, from the bustling streets of New York City to the serene landscapes of Banff National Park, we ensure that our guests experience the epitome of luxury and comfort wherever their travels take them.",
+    "Why": [
+      "Immerse yourself in luxury",
+      "Indulge in world-class amenities",
+      "Experience seamless hospitality",
+      "Discover unparalleled comfort"
+    ],
+    "Why2": [
+      "Unwind in breathtaking surroundings",
+      "Elevate your travel experience",
+      "Create unforgettable memories",
+      "Escape to a world of sophistication"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Luxuria Palace",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Grand Serenity Retreat",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Majestic Haven",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Opulent Oasis",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Elysian Towers",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Ivory Elegance",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Tranquil Heights",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Regal Retreat",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Royal Vista",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    },
+    {
+      "title": "Luxuria Palace",
+      "largeImage": "img/portfolio/10-large.jpg",
+      "smallImage": "img/portfolio/10-small.jpg"
+    },
+    {
+      "title": "Grand Serenity Retreat",
+      "largeImage": "img/portfolio/11-large.jpg",
+      "smallImage": "img/portfolio/11-small.jpg"
+    },
+    {
+      "title": "Majestic Haven",
+      "largeImage": "img/portfolio/12.jpg",
+      "smallImage": "img/portfolio/12.jpg"
+    },
+    {
+      "title": "Opulent Oasis",
+      "largeImage": "img/portfolio/13.jpg",
+      "smallImage": "img/portfolio/13.jpg"
+    },
+    {
+      "title": "Elysian Towers",
+      "largeImage": "img/portfolio/14.jpg",
+      "smallImage": "img/portfolio/14.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-hotel",
+      "name": "Luxury Accommodations",
+      "text": "Experience unparalleled luxury with our exquisite accommodations, meticulously designed to provide the utmost comfort and sophistication during your stay."
+    },
+    {
+      "icon": "fa fa-cutlery",
+      "name": "Fine Dining",
+      "text": "Indulge your palate with our gourmet culinary offerings, crafted by world-renowned chefs using the finest ingredients and culinary techniques."
+    },
+    {
+      "icon": "fa fa-heartbeat",
+      "name": "Relaxation & Wellness",
+      "text": "Rejuvenate your body and mind with our world-class spa facilities and wellness programs, designed to promote relaxation, rejuvenation, and holistic well-being."
+    },
+    {
+      "icon": "fa fa-car",
+      "name": "Transportation Services",
+      "text": "Enjoy hassle-free travel with our transportation services, providing convenient airport transfers, chauffeur-driven rides, and personalized transportation solutions."
+    },
+    {
+      "icon": "fa fa-gift",
+      "name": "Special Packages & Offers",
+      "text": "Enhance your stay with our exclusive packages and offers, curated to provide added value and unforgettable experiences tailored to your preferences."
+    },
+    {
+      "icon": "fa fa-star",
+      "name": "Exceptional Service",
+      "text": "Experience personalized service and attention to detail from our dedicated staff, committed to exceeding your expectations and ensuring a memorable stay."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"My stay at Luxuria Palace was absolutely fantastic! The elegant decor, impeccable service, and luxurious amenities exceeded my expectations. I can't wait to visit again.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"I recently had the pleasure of staying at Grand Serenity Retreat, and it was an unforgettable experience. The serene ambiance, breathtaking views, and attentive staff made my stay truly memorable.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Majestic Haven provided the perfect escape for me. The tranquil surroundings, top-notch facilities, and friendly staff made my stay truly incredible. Especially thanks to the seamless booking experience.\"",
+      "name": "Jane Smith"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Opulent Oasis exceeded all my expectations. From the opulent decor to the exceptional service, every moment of my stay was pure luxury.\"",
+      "name": "Emily Johnson"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"My stay at Elysian Towers was nothing short of extraordinary. The elegant ambiance, panoramic views, and world-class amenities made it a truly unforgettable experience.\"",
+      "name": "Michael Brown"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Tranquil Heights provided an exceptional retreat. From the serene surroundings to the attentive service, every aspect of my stay was truly remarkable.\"",
+      "name": "Sophia Anderson"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Joseph Mansour",
+      "job": "CEO & Founder"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Youssef Mroue",
+      "job": "Chief Operating Officer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Rina Osman",
+      "job": "Chief Marketing Officer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Emily White",
+      "job": "Director of Guest Experience"
+    }
+  ],
+  "Contact": {
+    "address": "1234 Maple Avenue, Ottawa, ON K1A 0G9",
+    "phone": "+1 800 555 1234",
+    "email": "contact@innfinityhotels.com",
+    "facebook": "facebook.com/innfinityhotels",
+    "twitter": "twitter.com/innfinityhotels",
+    "youtube": "youtube.com/innfinityhotels"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Real-Time Booking",
+      "text": "Instantly book rooms in our luxurious hotels across North America, with real-time availability updates."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Exclusive Offers",
+      "text": "Unlock special deals and exclusive offers when you book through our platform, ensuring you get the best value for your stay."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Wide Selection",
+      "text": "Choose from a diverse range of hotels, each offering unique amenities and experiences tailored to your preferences."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Seamless Experience",
+      "text": "Experience a seamless booking process from start to finish, with intuitive navigation and user-friendly features designed to enhance your stay."
+    }
+  ]
+}
