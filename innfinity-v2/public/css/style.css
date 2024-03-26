@@ -67,7 +67,7 @@ hr {
   width: 70px;
   text-align: center;
   position: relative;
-  background: #863bff;
+  background: #304e3a;
   margin-bottom: 20px;
   border: 0;
 }
@@ -594,7 +594,7 @@ label {
   transition: all 0.3s;
 }
 #contact .social i.fa:hover {
-  color: #b160fd;
+  color: #2f4231;
   background: #fff;
 }
 /* Footer Section*/
