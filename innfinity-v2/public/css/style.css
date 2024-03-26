@@ -324,19 +324,19 @@ header .intro-text {
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #79bb8c  0%, #3a6647 100%);
+  background: linear-gradient(to right, #74a583 0%, #345f41 100%);
   color: #fff;
 }
 #services .service-desc {
   margin: 10px 10px 20px;
 }
 #services h2 {
-  color: #141414;
+  color: #ffffff;
 }
 #services .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #ffffff  0%, #83da8c 100%);
+  background: rgba(0, 0, 0, 0.527);
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -483,7 +483,7 @@ header .intro-text {
   font-size: 16px;
 }
 #contact h2 {
-  color: #fff;
+  color: #ffffff;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
