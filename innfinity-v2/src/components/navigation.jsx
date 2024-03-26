@@ -1,4 +1,5 @@
 import React from "react";
+// import Logo from '../../public/tabicon.png';
 
 export const Navigation = (props) => {
   return (
@@ -17,7 +18,10 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
+          <a className="navbar-brand page-scroll" href="#page-top"> <img src="tabicon.png" alt="InnFinity" className="nav-logo"/>
+            
+          </a>{" "}
+          <a className="navbar-brand page-scroll" href="#page-top"> 
             InnFinity
           </a>{" "}
         </div>
