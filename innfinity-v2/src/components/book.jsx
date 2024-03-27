@@ -1,30 +1,34 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import React from "react";
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+import hotelsData from "../data/hotels.json";
 
 const initialState = {
   name: "",
   email: "",
-  message: "",
+  checkInDate: "",
+  checkOutDate: "",
+  guests: "",
+  selectedHotel: "",
 };
+
 export const Book = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, email, checkInDate, checkOutDate, guests, selectedHotel }, setState] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
-  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
+    console.log(name, email, checkInDate, checkOutDate, guests, selectedHotel);
+
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
       .then(
         (result) => {
           console.log(result.text);
@@ -35,6 +39,7 @@ export const Book = (props) => {
         }
       );
   };
+
   return (
     <div>
       <div id="book">
@@ -48,83 +53,106 @@ export const Book = (props) => {
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
+              <form name="bookingForm" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
+                      <label htmlFor="name">Your Name</label>
                       <input
                         type="text"
                         id="name"
                         name="name"
                         className="form-control"
-                        placeholder="Name"
+                        placeholder="Your Name"
                         required
                         onChange={handleChange}
                       />
-                      <p className="help-block text-danger"></p>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
+                      <label htmlFor="email">Your Email</label>
                       <input
                         type="email"
                         id="email"
                         name="email"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="Your Email"
                         required
                         onChange={handleChange}
                       />
-                      <p className="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="selectedHotel">Select a Hotel</label>
+                      <select
+                        id="selectedHotel"
+                        name="selectedHotel"
+                        className="form-control"
+                        required
+                        onChange={handleChange}
+                      >
+                        <option value="">Select Hotel</option>
+                        {Object.keys(hotelsData).map((chain) =>
+                          hotelsData[chain].map((hotel, index) => (
+                            <option key={`${chain}-${index}`} value={hotel.hotel}>
+                              {hotel.hotel}
+                            </option>
+                          ))
+                        )}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="guests">Number of Guests</label>
+                      <input
+                        type="number"
+                        id="guests"
+                        name="guests"
+                        className="form-control"
+                        placeholder="Number of Guests"
+                        required
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="checkInDate">Check-in Date</label>
+                      <input
+                        type="date"
+                        id="checkInDate"
+                        name="checkInDate"
+                        className="form-control"
+                        placeholder="Check-in Date"
+                        required
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="checkOutDate">Check-out Date</label>
+                      <input
+                        type="date"
+                        id="checkOutDate"
+                        name="checkOutDate"
+                        className="form-control"
+                        placeholder="Check-out Date"
+                        required
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                 </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
                 <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                  Book Now
                 </button>
               </form>
             </div>
           </div>
-          {/* <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

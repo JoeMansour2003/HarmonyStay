@@ -1,0 +1,278 @@
+{
+    "Royal Luxe": [
+        {
+            "hotel": "Luxuria Palace",
+            "address": {
+                "street": {
+                    "number": "123",
+                    "name": "Luxury Street",
+                    "unit": "Apt 1001"
+                },
+                "city": "New York",
+                "province": "New York",
+                "ZIP": "10001"
+            },
+            "number_of_rooms": 150,
+            "contact_info": {
+                "email": "luxuria@gmail.com",
+                "phone_number": "+1 (123) 456-7890"
+            },
+            "rating": 4.8
+        },
+        {
+            "hotel": "Grand Serenity Retreat",
+            "address": {
+                "street": {
+                    "number": "456",
+                    "name": "Serenity Lane",
+                    "unit": "Suite 200"
+                },
+                "city": "Los Angeles",
+                "province": "California",
+                "ZIP": "90001"
+            },
+            "number_of_rooms": 200,
+            "contact_info": {
+                "email": "grandserenity@gmail.com",
+                "phone_number": "+1 (234) 567-8901"
+            },
+            "rating": 4.7
+        },
+        {
+            "hotel": "Majestic Haven",
+            "address": {
+                "street": {
+                    "number": "789",
+                    "name": "Majestic Boulevard",
+                    "unit": "Unit 300"
+                },
+                "city": "Chicago",
+                "province": "Illinois",
+                "ZIP": "60601"
+            },
+            "number_of_rooms": 180,
+            "contact_info": {
+                "email": "majestichaven@gmail.com",
+                "phone_number": "+1 (345) 678-9012"
+            },
+            "rating": 4.9
+        }
+    ],
+    "Serene Haven": [
+        {
+            "hotel": "Opulent Oasis",
+            "address": {
+                "street": {
+                    "number": "101",
+                    "name": "Opulence Street",
+                    "unit": "Apt 400"
+                },
+                "city": "Houston",
+                "province": "Texas",
+                "ZIP": "77001"
+            },
+            "number_of_rooms": 220,
+            "contact_info": {
+                "email": "opulentoasis@gmail.com",
+                "phone_number": "+1 (456) 789-0123"
+            },
+            "rating": 4.6
+        },
+        {
+            "hotel": "Elysian Towers",
+            "address": {
+                "street": {
+                    "number": "202",
+                    "name": "Elysium Avenue",
+                    "unit": "Suite 500"
+                },
+                "city": "Toronto",
+                "province": "Ontario",
+                "ZIP": "M5H 2N2"
+            },
+            "number_of_rooms": 190,
+            "contact_info": {
+                "email": "elysiantowers@gmail.com",
+                "phone_number": "+1 (567) 890-1234"
+            },
+            "rating": 4.8
+        },
+        {
+            "hotel": "Ivory Elegance",
+            "address": {
+                "street": {
+                    "number": "303",
+                    "name": "Ivory Street",
+                    "unit": "Unit 600"
+                },
+                "city": "Vancouver",
+                "province": "British Columbia",
+                "ZIP": "V6C 1G8"
+            },
+            "number_of_rooms": 210,
+            "contact_info": {
+                "email": "ivoryelegance@gmail.com",
+                "phone_number": "+1 (678) 901-2345"
+            },
+            "rating": 4.7
+        }
+    ],
+    "Opulent Towers": [
+        {
+            "hotel": "Tranquil Heights",
+            "address": {
+                "street": {
+                    "number": "404",
+                    "name": "Tranquility Avenue",
+                    "unit": "Apt 700"
+                },
+                "city": "Miami",
+                "province": "Florida",
+                "ZIP": "33101"
+            },
+            "number_of_rooms": 230,
+            "contact_info": {
+                "email": "tranquilheights@gmail.com",
+                "phone_number": "+1 (789) 012-3456"
+            },
+            "rating": 4.9
+        },
+        {
+            "hotel": "Regal Retreat",
+            "address": {
+                "street": {
+                    "number": "505",
+                    "name": "Regal Road",
+                    "unit": "Suite 800"
+                },
+                "city": "Seattle",
+                "province": "Washington",
+                "ZIP": "98101"
+            },
+            "number_of_rooms": 240,
+            "contact_info": {
+                "email": "regalretreat@gmail.com",
+                "phone_number": "+1 (890) 123-4567"
+            },
+            "rating": 4.8
+        },
+        {
+            "hotel": "Royal Vista",
+            "address": {
+                "street": {
+                    "number": "606",
+                    "name": "Royal Street",
+                    "unit": "Unit 900"
+                },
+                "city": "San Francisco",
+                "province": "California",
+                "ZIP": "94101"
+            },
+            "number_of_rooms": 250,
+            "contact_info": {
+                "email": "royalvista@gmail.com",
+                "phone_number": "+1 (901) 234-5678"
+            },
+            "rating": 4.7
+        }
+    ],
+    "Majestic Retreats": [
+        {
+            "hotel": "Elite Splendor",
+            "address": {
+                "street": {
+                    "number": "707",
+                    "name": "Elite Avenue",
+                    "unit": "Apt 1000"
+                },
+                "city": "Montreal",
+                "province": "Quebec",
+                "ZIP": "H3B 4G7"
+            },
+            "number_of_rooms": 260,
+            "contact_info": {
+                "email": "elitesplendor@gmail.com",
+                "phone_number": "+1 (012) 345-6789"
+            },
+            "rating": 4.9
+        },
+        {
+            "hotel": "Sapphire Springs",
+            "address": {
+                "street": {
+                    "number": "808",
+                    "name": "Sapphire Street",
+                    "unit": "Suite 1100"
+                },
+                "city": "Atlanta",
+                "province": "Georgia",
+                "ZIP": "30301"
+            },
+            "number_of_rooms": 270,
+            "contact_info": {
+                "email": "sapphiresprings@gmail.com",
+                "phone_number": "+1 (123) 456-7890"
+            },
+            "rating": 4.8
+        },
+        {
+            "hotel": "Lavish Oasis",
+            "address": {
+                "street": {
+                    "number": "909",
+                    "name": "Lavish Lane",
+                    "unit": "Unit 1200"
+                },
+                "city": "Orlando",
+                "province": "Florida",
+                "ZIP": "32801"
+            },
+            "number_of_rooms": 280,
+            "contact_info": {
+                "email": "lavishoasis@gmail.com",
+                "phone_number": "+1 (234) 567-8901"
+            },
+            "rating": 4.9
+        }
+    ],
+    "Elite Paradigm": [
+        {
+            "hotel": "Crystal Heights",
+            "address": {
+                "street": {
+                    "number": "1010",
+                    "name": "Crystal Court",
+                    "unit": "Apt 1300"
+                },
+                "city": "Calgary",
+                "province": "Alberta",
+                "ZIP": "T2P 1J9"
+            },
+            "number_of_rooms": 290,
+            "contact_info": {
+                "email": "crystalheights@gmail.com",
+                "phone_number": "+1 (345) 678-9012"
+            },
+            "rating": 4.7
+        },
+        {
+            "hotel": "Golden Mirage",
+            "address": {
+                "street": {
+                    "number": "1111",
+                    "name": "Golden Avenue",
+                    "unit": "Suite 1400"
+                },
+                "city": "Ottawa",
+                "province": "Ontario",
+                "ZIP": "K1P 1J1"
+            },
+            "number_of_rooms": 300,
+            "contact_info": {
+                "email": "goldenmirage@gmail.com",
+                "phone_number": "+1 (456) 789-0123"
+            },
+            "rating": 4.8
+        }
+    ]
+}

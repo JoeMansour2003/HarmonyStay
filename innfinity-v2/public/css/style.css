@@ -521,12 +521,12 @@ header .intro-text {
   color: #111111;
   background: #fff;
 }
-label {
+/* label {
   font-size: 12px;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   float: left;
-}
+} */
 #contact .form-control {
   display: block;
   width: 100%;
@@ -598,7 +598,9 @@ label {
   color: #2f4231;
   background: #fff;
 }
+
 /* Footer Section*/
+
 #footer {
   background: #f6f6f6;
   padding: 30px 0;
@@ -620,10 +622,8 @@ label {
   }
 }
 
-
-
-
 /* Book Section */
+
 #book {
   padding: 100px 0 60px;
   background: linear-gradient(to right, #74a583 0%, #345f41 100%);
@@ -731,4 +731,17 @@ label {
 #book .social i.fa:hover {
   color: #2f4231;
   background: #fff;
+}
+
+/* FORM */
+
+.form-control {
+  font-family: "Poppins", sans-serif;
+}
+label {
+  font-size: small;
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
