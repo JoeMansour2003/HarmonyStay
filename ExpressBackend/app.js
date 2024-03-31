@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const hotelRoutes = require('./routes/hotels');
+const loginRoutes = require('./routes/login');
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 
 
 app.use('/api/hotels', hotelRoutes);
+app.use('/api/login', loginRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

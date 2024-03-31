@@ -133,3 +133,4 @@ ADD CONSTRAINT fk_customer_user FOREIGN KEY (user_id) REFERENCES users(user_id);
 ALTER TABLE employee
 ADD COLUMN user_id INT,
 ADD CONSTRAINT fk_employee_user FOREIGN KEY (user_id) REFERENCES users(user_id);
+

@@ -1,11 +1,8 @@
 require('dotenv').config();
 const express = require('express');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
-
-const app = express();
-app.use(express.json());
+const router = express.Router();
 
 const pool = new Pool({
   user: process.env.DB_USER,
@@ -15,30 +12,31 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-app.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
   const { username, password } = req.body;
 
   try {
     const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+
     if (result.rows.length === 0) {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
 
     const user = result.rows[0];
 
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) {
+    // Directly compare the plain text passwords
+    if (password !== user.password) {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
 
-    const token = jwt.sign({ userId: user.user_id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    // Generate a token as before
+    const token = jwt.sign({ userId: user.user_id, role: user.role }, process.env.JWT_SECRET || 'JT4jNrO40BSkElWpMQ9pvy8bRXStk6aYQjmc7TrSXsQ=', { expiresIn: '1h' });
 
-    res.json({ token });
+    res.json({ token, role: user.role });
   } catch (err) {
-    console.error(err);
+    console.error("Error details:", err.message);
     res.status(500).json({ error: 'Server error' });
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+module.exports = router;

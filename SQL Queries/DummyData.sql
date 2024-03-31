@@ -263,3 +263,63 @@ INSERT INTO HotelRoom (room_number, price, AC, TV, fridge, capacity, view, exten
 (50804, 150.00, TRUE, TRUE, TRUE, 'Double', 'Mountain', FALSE, NULL, 508, 'Metropolitan Inns'),
 (50805, 100.00, TRUE, TRUE, TRUE, 'Single', 'Sea', FALSE, NULL, 508, 'Metropolitan Inns');
 
+INSERT INTO USERS (user_id, username, password, role) VALUES
+(123465958, 'admin', 'admin123', 'admin'),
+(123547569, 'employee', 'employee123', 'employee'),
+(129727598, 'customer', 'customer123', 'customer');
+
+INSERT INTO Employee (
+    SIN, 
+    full_name, 
+    address_street_number, 
+    address_street_name, 
+    city, 
+    province, 
+    zip, 
+    role, 
+    works_for_hotel_ID, 
+    works_for_chain_name,
+	user_id
+) VALUES (
+    123456789, 
+    'John Doe', 
+    10, 
+    'Enterprise Avenue', 
+    'Techville', 
+    'Ontario', 
+    'K1A2B3', 
+    'Manager', 
+    101,
+    'Grandiose Getaways',
+	123547569
+);
+
+INSERT INTO Customer (
+    Customer_id, 
+    type, 
+    full_name, 
+    first_name, 
+    middle_name, 
+    last_name, 
+    address_street_number, 
+    address_street_name, 
+    city, 
+    province, 
+    ZIP, 
+    registration_date,
+    user_id
+) VALUES (
+    1, 
+    'VIP', 
+    'Jane Smith', 
+    'Jane', 
+    'Q', 
+    'Smith', 
+    100, 
+    'Liberty Street', 
+    'Freedom City', 
+    'Liberty State', 
+    123456, 
+    '2023-01-15',
+    129727598
+);
