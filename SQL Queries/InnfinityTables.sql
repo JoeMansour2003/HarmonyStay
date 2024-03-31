@@ -37,6 +37,7 @@ CREATE TABLE Employee (
     role VARCHAR(255),
     works_for_hotel_ID INT,
     works_for_chain_name VARCHAR(255),
+
     FOREIGN KEY (works_for_hotel_ID, works_for_chain_name) REFERENCES Hotel(hotel_ID, chain_name)
 );
 
@@ -117,3 +118,18 @@ CREATE TABLE Office (
     phone_number CHAR(10),
     FOREIGN KEY (chain_name) REFERENCES Chain(name)
 );
+
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL
+);
+
+ALTER TABLE customer
+ADD COLUMN user_id INT,
+ADD CONSTRAINT fk_customer_user FOREIGN KEY (user_id) REFERENCES users(user_id);
+
+ALTER TABLE employee
+ADD COLUMN user_id INT,
+ADD CONSTRAINT fk_employee_user FOREIGN KEY (user_id) REFERENCES users(user_id);
