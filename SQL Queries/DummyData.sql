@@ -261,5 +261,5 @@ INSERT INTO HotelRoom (room_number, price, AC, TV, fridge, capacity, view, exten
 (50802, 200.00, TRUE, TRUE, TRUE, 'Double', 'Sea', TRUE, NULL, 508, 'Metropolitan Inns'),
 (50803, 150.00, TRUE, TRUE, TRUE, 'Luxury', 'Mountain', FALSE, 'Minor wear and tear', 508, 'Metropolitan Inns'),
 (50804, 150.00, TRUE, TRUE, TRUE, 'Double', 'Mountain', FALSE, NULL, 508, 'Metropolitan Inns'),
-(50805, 100.00, TRUE, TRUE, TRUE, 'Single', 'Sea', FALSE, NULL, 508, 'Metropolitan Inns'),
+(50805, 100.00, TRUE, TRUE, TRUE, 'Single', 'Sea', FALSE, NULL, 508, 'Metropolitan Inns');
 
