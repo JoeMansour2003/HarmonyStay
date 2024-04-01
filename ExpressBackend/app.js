@@ -7,7 +7,7 @@ const updateemployeeRoutes = require("./routes/updateemployee");
 const customerRoutes = require("./routes/customer");
 const rentingRoutes = require("./routes/renting");
 const roomNumberRoutes = require("./routes/roomNumber");
-
+const createRentingRoutes = require("./routes/createRenting");
 const app = express();
 
 require("dotenv").config();
@@ -22,6 +22,7 @@ app.use("/api/employees", employeesRoutes);
 app.use("/api/customer", customerRoutes);
 app.use("/api/room_number", roomNumberRoutes);
 app.use("/api/employees/:id", updateemployeeRoutes);
+app.use("/api/createRenting", createRentingRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-// import { Navigation } from "./components/navigation";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { About } from "./components/about";
 import { Features } from "./components/features";
@@ -11,7 +16,7 @@ import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import { MainLayout } from "./components/Mainlayout";
-import Admin  from "./components/admin";
+import Admin from "./components/admin";
 import { Employee } from "./components/employee";
 import LoginPage from "./components/login";
 import JsonData from "./data/data.json";
@@ -34,11 +39,18 @@ const App = () => {
       <Navigation />
       <Routes>
         {/* Wrap the main content in MainLayout */}
-        <Route path="/" element={<MainLayout><HomePage data={landingPageData} /></MainLayout>} />
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <HomePage data={landingPageData} />
+            </MainLayout>
+          }
+        />
         <Route path="/login" element={<LoginPage />} />
         {/* Admin route, not wrapped in MainLayout */}
         <Route path="/admin" element={<Admin />} />
-        <Route path="/employee" element={< Employee/>} />
+        <Route path="/employee" element={<Employee />} />
       </Routes>
     </Router>
   );

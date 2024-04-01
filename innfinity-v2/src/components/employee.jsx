@@ -69,12 +69,26 @@ export const Employee = (props) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post("http://localhost:3001/api/createRenting", formData)
+      .then((response) => {
+        console.log(response);
+        // You might want to clear the form here
+        setFormData(initialState);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error creating renting: ", error);
+      });
   };
-  console.log(customerList);
+
+  const [formData, setFormData] = useState(initialState);
+
   return (
     <div id="renting">
       <div className="container">
@@ -127,7 +141,7 @@ export const Employee = (props) => {
                       {customerList.map((customer) => (
                         <option
                           key={customer.customer_id}
-                          value={customer.full_name}
+                          value={customer.customer_id}
                         >
                           {customer.full_name}
                         </option>
@@ -144,40 +158,43 @@ export const Employee = (props) => {
                       name="room_number"
                       className="form-control"
                       //   placeholder="Customer ID"
-                        required
-                        onChange={handleChange}
-                      >
-                        <option value="">Select room</option>
-                        {roomNumberList.map((room_number) => (
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Select room</option>
+                      {roomNumberList.map((room_number) => (
                         <option
                           key={room_number.room_number}
-                          value={room_number.price}
+                          value={room_number.room_number}
                         >
                           Room Number: {room_number.room_number} , Price:{" "}
                           {room_number.price}
                         </option>
-                        ))}
-                      </select>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                      <label htmlFor="date">Date</label>
-                      <input
-                        type="date"
-                        id="date"
-                        name="date"
-                        className="form-control"
-                        required
-                        onChange={handleChange}
-                      />
-                      </div>
-                    </div>
-                    </div>
-                  </form>
+                      ))}
+                    </select>
                   </div>
                 </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="date">Date</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      className="form-control"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
               </div>
-              );
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
