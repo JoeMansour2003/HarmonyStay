@@ -134,3 +134,6 @@ ALTER TABLE employee
 ADD COLUMN user_id INT,
 ADD CONSTRAINT fk_employee_user FOREIGN KEY (user_id) REFERENCES users(user_id);
 
+-- Auto incrementing primary keys for Renting
+CREATE SEQUENCE renting_renting_id_seq;
+ALTER TABLE renting ALTER COLUMN renting_id SET DEFAULT nextval('renting_renting_id_seq');
