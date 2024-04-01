@@ -12,6 +12,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
+app.use('/api/employees', updateemployeeRoutes);
 app.use('/api/hotels', hotelRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/employees', employeesRoutes);
