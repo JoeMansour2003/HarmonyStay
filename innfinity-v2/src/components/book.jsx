@@ -41,7 +41,7 @@ export const Book = (props) => {
   };
 
   return (
-    <div>
+
       <div id="book">
         <div className="container">
           <div className="col-md-8">
@@ -155,6 +155,6 @@ export const Book = (props) => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };

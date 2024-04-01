@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Navigation } from "./components/navigation";
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { About } from "./components/about";
 import { Features } from "./components/features";
