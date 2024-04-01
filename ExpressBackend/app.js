@@ -9,13 +9,14 @@ const rentingRoutes = require("./routes/renting");
 const roomNumberRoutes = require("./routes/roomNumber");
 const createRentingRoutes = require("./routes/createRenting");
 const getarchives = require("./routes/archives");
+const roomsByHotelRouter = require("./routes/roomsByHotel");
 const app = express();
 
 require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/employees', updateemployeeRoutes);
+app.use("/api/employees", updateemployeeRoutes);
 app.use("/api/hotels", hotelRoutes);
 app.use("/api/login", loginRoutes);
 app.use("/api/renting", rentingRoutes);
@@ -24,6 +25,7 @@ app.use("/api/customer", customerRoutes);
 app.use("/api/room_number", roomNumberRoutes);
 app.use("/api/employees/:id", updateemployeeRoutes);
 app.use("/api/createRenting", createRentingRoutes);
+app.use("/api/hotels", roomsByHotelRouter);
 app.use("/api/archives", getarchives);
 
 const PORT = process.env.PORT || 3001;
