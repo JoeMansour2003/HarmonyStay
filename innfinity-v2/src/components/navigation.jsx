@@ -29,11 +29,11 @@ export const Navigation = () => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a href="#page-top" className="navbar-brand page-scroll" onClick={(e) => handleNavClick(e, "/#page-top")}>
+          <a href="/#page-top" className="navbar-brand page-scroll" onClick={(e) => handleNavClick(e, "/#page-top")}>
             <img src="tabicon.png" alt="InnFinity" className="nav-logo" />
           </a>
           <a
-            href="#page-top"
+            href="/#page-top"
             onClick={(e) => handleNavClick(e, "/#page-top")}
             className="navbar-brand"
           >
