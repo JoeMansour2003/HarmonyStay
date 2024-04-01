@@ -1,5 +1,8 @@
-.payment-wrapper{
-    margin-top: 120px;
+.payment-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
 }
 
 .payment-header {
@@ -21,7 +24,7 @@
     align-items: center;
 }
 
-.payment-wrapper label{
+.payment-wrapper label {
     color: #1a331d;
     margin-top: 20px;
     font-weight: 500;
@@ -32,11 +35,12 @@
     max-width: 500px;
 }
 
-.form-wrapper{
-    background-color: rgb(235, 235, 235);
+.form-wrapper {
+    background-color: rgb(238, 238, 238);
     padding: 30px;
     border-radius: 10px;
     border: 1px solid #dcdcdc;
+    box-shadow: 1px 2px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 #pay-now {
@@ -55,3 +59,10 @@
     background-color: #448d5a;
 }
 
+#pay-btn {
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin-left: 0;
+}

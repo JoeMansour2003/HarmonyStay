@@ -57,10 +57,10 @@ export const Payment = () => {
                 <label htmlFor="nameOnCard">Name on Card</label>
                 <input type="text" className="form-control" id="nameOnCard" placeholder="Name on Card" />
               </div></div>
-            <div className="col-md-12">
-              <div>
-              <a href="/confirmation" className="btn btn-custom btn-lg">Pay Now</a>
-              </div></div>
+
+              <div className="col-md-12">
+              <a href="/confirmation" className="btn btn-custom btn-lg" id='pay-btn'>Pay Now</a>
+              </div>
           </form>
         </div>
       </div>
