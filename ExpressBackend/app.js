@@ -8,6 +8,7 @@ const customerRoutes = require("./routes/customer");
 const rentingRoutes = require("./routes/renting");
 const roomNumberRoutes = require("./routes/roomNumber");
 const createRentingRoutes = require("./routes/createRenting");
+const getarchives = require("./routes/archives");
 const app = express();
 
 require("dotenv").config();
@@ -23,6 +24,7 @@ app.use("/api/customer", customerRoutes);
 app.use("/api/room_number", roomNumberRoutes);
 app.use("/api/employees/:id", updateemployeeRoutes);
 app.use("/api/createRenting", createRentingRoutes);
+app.use("/api/archives", getarchives);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
