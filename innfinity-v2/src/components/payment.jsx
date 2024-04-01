@@ -59,7 +59,7 @@ export const Payment = () => {
               </div></div>
             <div className="col-md-12">
               <div>
-                <button type="button" className="btn btn-primary" id='pay-now'>Pay Now</button>
+              <a href="/confirmation" className="btn btn-custom btn-lg">Pay Now</a>
               </div></div>
           </form>
         </div>

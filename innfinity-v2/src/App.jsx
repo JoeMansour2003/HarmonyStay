@@ -15,6 +15,7 @@ import Admin from "./components/admin";
 import { Employee } from "./components/employee";
 import { Payment } from "./components/payment";
 import LoginPage from "./components/login";
+import Confirmation from "./components/confirmation";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/employee" element={<Employee />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </Router>
   );
