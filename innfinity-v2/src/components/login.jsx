@@ -26,7 +26,7 @@ const LoginPage = () => {
       } else if (role === 'employee') {
         navigate('/employee');
       } else {
-        navigate('/user');
+        navigate('/');
       }
     } catch (error) {
       setError('Invalid username or password');
