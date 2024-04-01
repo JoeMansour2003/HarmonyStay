@@ -137,3 +137,11 @@ ADD CONSTRAINT fk_employee_user FOREIGN KEY (user_id) REFERENCES users(user_id);
 -- Auto incrementing primary keys for Renting
 CREATE SEQUENCE renting_renting_id_seq;
 ALTER TABLE renting ALTER COLUMN renting_id SET DEFAULT nextval('renting_renting_id_seq');
+
+-- Auto incrementing primary keys for customer_customer_id
+CREATE SEQUENCE customer_customer_id_seq;
+
+ALTER TABLE public.customer
+ALTER COLUMN customer_id SET DEFAULT nextval('customer_customer_id_seq');
+
+ALTER SEQUENCE customer_customer_id_seq OWNED BY public.customer.customer_id;

@@ -262,7 +262,7 @@ export const Book = () => {
                   <div className="form-group">
                     <label htmlFor="address_street_number">Street Number</label>
                     <input
-                      type="text"
+                      type="number"
                       id="address_street_number"
                       name="address_street_number"
                       className="form-control"
