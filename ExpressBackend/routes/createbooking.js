@@ -6,9 +6,9 @@ router.post("/", async (req, res) => {
   const bookingData = req.body;
   try {
     const query = {
-      text: "INSERT INTO bookings (Customer_id, room_number, booking_date, checkin_date, checkout_date) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+      text: "INSERT INTO public.booking (customer_id, room_number, booking_date, checkin_date, checkout_date) VALUES ($1, $2, $3, $4, $5) RETURNING *",
       values: [
-        bookingData.Customer_id,
+        bookingData.customer_id,
         bookingData.room_number,
         bookingData.booking_date,
         bookingData.checkin_date,

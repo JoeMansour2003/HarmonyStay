@@ -145,3 +145,10 @@ ALTER TABLE public.customer
 ALTER COLUMN customer_id SET DEFAULT nextval('customer_customer_id_seq');
 
 ALTER SEQUENCE customer_customer_id_seq OWNED BY public.customer.customer_id;
+
+-- Auto incrementing primary keys for booking_booking_number
+
+CREATE SEQUENCE booking_number_seq;
+
+ALTER TABLE public.booking
+ALTER COLUMN booking_number SET DEFAULT nextval('booking_number_seq');

@@ -143,7 +143,7 @@ export const Employee = (props) => {
                           key={customer.customer_id}
                           value={customer.customer_id}
                         >
-                          {customer.full_name}
+                          {customer.first_name} {customer.last_name}
                         </option>
                       ))}
                     </select>

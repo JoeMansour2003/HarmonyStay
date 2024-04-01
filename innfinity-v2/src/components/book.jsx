@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import location from "../data/customer_location.json";
 
@@ -76,6 +77,7 @@ export const Book = () => {
 
   const clearFormData = () => setFormData({ ...initialState });
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -88,11 +90,12 @@ export const Book = () => {
         customerResponse.data
       );
 
-      const customerId = customerResponse.data.Customer_id;
+      const customer_id = customerResponse.data.customer_id;
+      
 
       const bookingData = {
         ...formData,
-        Customer_id: customerId,
+        customer_id: customer_id,
       };
 
       const bookingResponse = await axios.post(
@@ -102,6 +105,7 @@ export const Book = () => {
       console.log("Booking data successfully submitted:", bookingResponse.data);
 
       clearFormData();
+      navigate("/payment");
     } catch (error) {
       console.error("Error submitting booking:", error);
     }
@@ -385,9 +389,9 @@ export const Book = () => {
                   </div>
                 </div>
               </div>
-              <a href="/payment" className="btn btn-custom btn-lg">
-                Book Now
-              </a>
+              <button type="submit" className="btn btn-custom btn-lg">
+                Create account & Book Now
+              </button>
             </form>
           </div>
         </div>
