@@ -31,6 +31,9 @@ h4 {
   color: #333;
   font-weight: 600;
 }
+#book h4{
+  padding: 15px;
+}
 h5 {
   text-transform: uppercase;
   font-weight: 700;
@@ -545,7 +548,7 @@ header .intro-text {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 #contact .form-control:focus {
   border-color: #999;
@@ -630,6 +633,7 @@ header .intro-text {
   padding: 50px 60px;
   background: linear-gradient(to right, #74a583 0%, #345f41 100%);
   color: rgba(255, 255, 255, 0.75);
+  font-family: "Poppins", sans-serif;
 }
 #book .section-title {
   margin-bottom: 40px;
@@ -658,9 +662,6 @@ header .intro-text {
   margin-bottom: 25px;
   padding-bottom: 20px;
   font-weight: 400;
-}
-#book form {
-  padding-top: 20px;
 }
 #book .text-danger {
   color: #cc0033;
@@ -691,7 +692,7 @@ header .intro-text {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 #book .form-control:focus {
   border-color: #999;
@@ -739,6 +740,7 @@ header .intro-text {
 
 .form-control {
   font-family: "Poppins", sans-serif;
+  border-radius: 10px;
 }
 label {
   font-size: small;
