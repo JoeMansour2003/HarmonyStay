@@ -13,6 +13,7 @@ import { Contact } from "./components/contact";
 import { MainLayout } from "./components/Mainlayout";
 import Admin from "./components/admin";
 import { Employee } from "./components/employee";
+import { Payment } from "./components/payment";
 import LoginPage from "./components/login";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
@@ -46,6 +47,7 @@ const App = () => {
         {/* Admin route, not wrapped in MainLayout */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/employee" element={<Employee />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </Router>
   );

@@ -78,7 +78,7 @@ export const Book = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const customerResponse = await axios.post('http://localhost:3001/api/customers', formData); 
+      const customerResponse = await axios.post('http://localhost:3001/api/customers', formData);
       console.log("Customer data successfully submitted:", customerResponse.data);
 
       const customerId = customerResponse.data.Customer_id;
@@ -109,7 +109,7 @@ export const Book = () => {
             <form name="bookingForm" onSubmit={handleSubmit}>
 
               {/* Customer information fields */}
-              
+
               <div className="row">
                 <h4>Customer Information</h4>
                 <div className="col-md-4">
@@ -243,7 +243,7 @@ export const Book = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="btn btn-custom btn-lg">Book Now</button>
+              <a href="/payment" className="btn btn-custom btn-lg">Book Now</a>
             </form>
           </div>
         </div>
