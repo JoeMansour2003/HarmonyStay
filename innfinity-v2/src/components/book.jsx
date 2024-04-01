@@ -80,7 +80,7 @@ export const Book = () => {
     e.preventDefault();
     try {
       const customerResponse = await axios.post(
-        "http://localhost:3001/api/customers",
+        "http://localhost:3001/api/customers", //Notes this is customers with and "S" and not customer
         formData
       );
       console.log(
