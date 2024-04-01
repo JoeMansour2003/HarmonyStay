@@ -198,6 +198,18 @@ export const Book = () => {
                 <h4>Booking Information</h4>
                 <div className="col-md-6">
                   <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="text" id="email" name="email" className="form-control" placeholder="Email" required onChange={handleChange} />
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="number">Phone Number</label>
+                    <input type="number" id="number" name="number" className="form-control" placeholder="Phone Number" required onChange={handleChange} />
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
                     <label htmlFor="hotel_name">Hotel Name</label>
                     <select id="hotel_name" name="hotel_name" className="form-control" required onChange={handleChange}>
                       <option value="">Select Hotel</option>
