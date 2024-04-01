@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 export const Navigation = () => {
   const location = useLocation();
 
-  const handleScroll = (e, selector) => {
-    // Check if we're currently on the homepage
-    if (location.pathname === "/") {
-      e.preventDefault(); // Prevent default link behavior
-      const element = document.querySelector(selector);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+  const handleNavClick = (e, path) => {
+    if (location.pathname === "/login") {
+      e.preventDefault();
+      window.location.href = path;
     }
-    // If not on the homepage, the <Link> to="/" with state will handle navigation
   };
 
   return (
@@ -31,44 +29,96 @@ export const Navigation = () => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <Link to="/" className="navbar-brand page-scroll">
-            <img src="tabicon.png" alt="InnFinity" className="nav-logo"/>
-          </Link>
-          <Link to="/" className="navbar-brand page-scroll">
+          <a href="#page-top" className="navbar-brand page-scroll" onClick={(e) => handleNavClick(e, "/#page-top")}>
+            <img src="tabicon.png" alt="InnFinity" className="nav-logo" />
+          </a>
+          <a
+            href="#page-top"
+            onClick={(e) => handleNavClick(e, "/#page-top")}
+            className="navbar-brand"
+          >
             InnFinity
-          </Link>
+          </a>
         </div>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            {/* Use an <a> tag with onClick for in-page navigation; for external pages, use <Link> */}
             <li>
-              <a href="#about" onClick={(e) => handleScroll(e, '#about')} className="page-scroll">About</a>
+              <a
+                href="#about"
+                onClick={(e) => handleNavClick(e, "/#about")}
+                className="page-scroll"
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="#features" onClick={(e) => handleScroll(e, '#features')} className="page-scroll">Features</a>
+              <a
+                href="#features"
+                onClick={(e) => handleNavClick(e, "/#features")}
+                className="page-scroll"
+              >
+                Features
+              </a>
             </li>
             <li>
-              <a href="#book" onClick={(e) => handleScroll(e, '#book')} className="page-scroll">Book</a>
+              <a
+                href="#book"
+                onClick={(e) => handleNavClick(e, "/#book")}
+                className="page-scroll"
+              >
+                Book
+              </a>
             </li>
             <li>
-              <a href="#gallery" onClick={(e) => handleScroll(e, '#gallery')} className="page-scroll">Gallery</a>
+              <a
+                href="#gallery"
+                onClick={(e) => handleNavClick(e, "/#gallery")}
+                className="page-scroll"
+              >
+                Gallery
+              </a>
             </li>
             <li>
-              <a href="#services" onClick={(e) => handleScroll(e, '#services')} className="page-scroll">Services</a>
+              <a
+                href="#services"
+                onClick={(e) => handleNavClick(e, "/#services")}
+                className="page-scroll"
+              >
+                Services
+              </a>
             </li>
             <li>
-              <a href="#testimonials" onClick={(e) => handleScroll(e, '#testimonials')} className="page-scroll">Testimonials</a>
+              <a
+                href="#testimonials"
+                onClick={(e) => handleNavClick(e, "/#testimonials")}
+                className="page-scroll"
+              >
+                Testimonials
+              </a>
             </li>
             <li>
-              <a href="#team" onClick={(e) => handleScroll(e, '#team')} className="page-scroll">Team</a>
+              <a
+                href="#team"
+                onClick={(e) => handleNavClick(e, "/#team")}
+                className="page-scroll"
+              >
+                Team
+              </a>
             </li>
             <li>
-              <a href="#contact" onClick={(e) => handleScroll(e, '#contact')} className="page-scroll">Contact</a>
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "/#contact")}
+                className="page-scroll"
+              >
+                Contact
+              </a>
             </li>
-            {/* For the Login, use <Link> for navigation to a different route */}
             <li>
-              <Link to="/login">Login</Link>
+              <a href="/login" className="page-scroll">
+                <FontAwesomeIcon icon={faUser} style={{ color: '#345f41' }} Login /> Login
+              </a>
             </li>
           </ul>
         </div>

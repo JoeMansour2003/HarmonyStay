@@ -12,20 +12,13 @@ import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import LoginPage from "./components/login";
 import JsonData from "./data/data.json";
+import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
-const ScrollToElement = () => {
-  const { state } = useLocation();
-  useEffect(() => {
-    if (state?.scrollTo) {
-      const element = document.getElementById(state.scrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [state]);
-  return null;
-};
+export const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 700,
+  speedAsDuration: true,
+});
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
@@ -36,7 +29,6 @@ const App = () => {
   return (
     <Router>
       <Navigation />
-      <ScrollToElement /> {/* Invoke the scroll behavior whenever the location state changes */}
       <Routes>
         <Route path="/" element={
           <React.Fragment>
