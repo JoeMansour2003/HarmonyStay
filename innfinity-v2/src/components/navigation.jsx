@@ -45,7 +45,7 @@ export const Navigation = () => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a
-                href="#about"
+                href="/#about"
                 onClick={(e) => handleNavClick(e, "/#about")}
                 className="page-scroll"
               >
@@ -54,7 +54,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#features"
+                href="/#features"
                 onClick={(e) => handleNavClick(e, "/#features")}
                 className="page-scroll"
               >
@@ -63,7 +63,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#book"
+                href="/#book"
                 onClick={(e) => handleNavClick(e, "/#book")}
                 className="page-scroll"
               >
@@ -72,7 +72,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#gallery"
+                href="/#gallery"
                 onClick={(e) => handleNavClick(e, "/#gallery")}
                 className="page-scroll"
               >
@@ -81,7 +81,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#services"
+                href="/#services"
                 onClick={(e) => handleNavClick(e, "/#services")}
                 className="page-scroll"
               >
@@ -90,7 +90,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#testimonials"
+                href="/#testimonials"
                 onClick={(e) => handleNavClick(e, "/#testimonials")}
                 className="page-scroll"
               >
@@ -99,7 +99,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#team"
+                href="/#team"
                 onClick={(e) => handleNavClick(e, "/#team")}
                 className="page-scroll"
               >
@@ -108,7 +108,7 @@ export const Navigation = () => {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={(e) => handleNavClick(e, "/#contact")}
                 className="page-scroll"
               >
@@ -116,7 +116,7 @@ export const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/login" className="page-scroll">
+              <a href="/login">
                 <FontAwesomeIcon icon={faUser} style={{ color: '#345f41' }} Login /> Login
               </a>
             </li>

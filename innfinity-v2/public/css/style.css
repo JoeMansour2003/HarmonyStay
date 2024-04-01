@@ -262,6 +262,7 @@ header .intro-text {
 }
 /* Features Section */
 #features {
+  padding: 0px 0 100px 0;
   background: #f6f6f6;
 }
 #features i.fa {
@@ -626,7 +627,7 @@ header .intro-text {
 /* Book Section */
 
 #book {
-  padding: 100px 0 60px;
+  padding: 50px 60px;
   background: linear-gradient(to right, #74a583 0%, #345f41 100%);
   color: rgba(255, 255, 255, 0.75);
 }
