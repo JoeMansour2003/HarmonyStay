@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import './employeeportal.css';
+import Book from "./book";
 
 const initialState = {
   booking_id: "",
@@ -71,25 +73,20 @@ export const EmployeeV2 = () => {
   };
 
   return (
-    <div id="employee">
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+    <div id="renting">
       <div className="container">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="row">
             <div className="section-title">
               <h2>Employee Page</h2>
             </div>
             <form name="employeeForm" onSubmit={handleSubmit}>
               <div className="row">
-                <h4>Approving Rental</h4>{" "}
-                <p>
-                  Please fill out the form below to create a new renting record.
-                </p>
+                <div className="col-md-8">
+                  <h4>Approving Rental</h4>{" "}
+                  <p>
+                    Please fill out the form below to create a new renting record.
+                  </p></div>
                 <div className="col-md-6">
                   <div className="form-group">
                     <label htmlFor="booking_id">Booking:</label>
@@ -153,10 +150,108 @@ export const EmployeeV2 = () => {
                     </select>
                   </div>
                 </div>
+                <div className="col-md-4">
+                  <button type="submit" className="btn btn-primary" id="renting-btn">
+                    Submit
+                  </button>
+                </div>
               </div>
-              <button type="submit" className="btn btn-custom btn-lg">
-                Submit
-              </button>
+            </form>
+          </div>
+          <Book />
+
+          <div className="row" id="approval-box">
+            <h2>Approve Renting status</h2>
+            <p>Please fill out this form to approve a room rental.</p>
+            <form name="approval" onSubmit={handleSubmit}>
+              {/* Form content goes here */}
+              <div className="row">
+                <div className="col-md-6">
+                  <label htmlFor="Booking_info">Booking info</label>
+                  <select
+                    //   type="text"
+                    id="booking_info"
+                    name="booking_info"
+                    className="form-control"
+                    //   placeholder="Select Empolyee"
+                    required
+                    onChange={handleChange}
+                  >
+                    <option value="">Select Booking</option>
+                    {bookingList.map((booking) => (
+                      <option
+                        key={booking.booking_number}
+                        value={booking.booking_number}
+                      >
+                        room number: {booking.room_number}, checkin_date:{" "}
+                        {booking.checkin_date}, checkout_date:{" "}
+                        {booking.checkout_date}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="Employee_id">Employee</label>
+                    <select
+                      //   type="text"
+                      id="Employee_id"
+                      name="Employee_id"
+                      className="form-control"
+                      //   placeholder="Customer ID"
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Select Employee</option>
+                      {employeesList.map((employee) => (
+                        <option
+                          key={employee.employeeid}
+                          value={employee.employeeid}
+                        >
+                          {employee.full_name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="form-group">
+                    <label htmlFor="apporval">Approval</label>
+                    <select
+                      //   type="number"
+                      id="approval"
+                      name="approval"
+                      className="form-control"
+                      //   placeholder="Customer ID"
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Select Approval</option>
+                      <option value="approved">Approved</option>
+                      <option value="pending">Pending</option>
+                      <option value="Not approved">Not approved</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="form-group">
+                    <label htmlFor="date">Date</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      className="form-control"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <button type="submit" className="btn btn-primary" id="renting-btn">
+                    Submit
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>

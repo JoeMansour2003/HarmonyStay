@@ -1,7 +1,13 @@
-#renting{
+#renting {
     margin-top: 100px;
     font-family: 'Poppins', sans-serif;
     background-color: rgb(243, 243, 243);
+}
+
+@media (max-width: 1210px) {
+    #renting {
+        margin-top: 200px;
+    }
 }
 
 

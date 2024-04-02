@@ -221,7 +221,8 @@ export const Employee = (props) => {
                 <div className="col-md-6">
                   <button type="submit" className="btn btn-primary" id="renting-btn">
                     Submit
-                  </button></div>
+                  </button>
+                </div>
               </div>
             </form>
             <Book />
@@ -315,10 +316,10 @@ export const Employee = (props) => {
                   </div>
                 </div>
                 <div className="col-md-4">
-                <button type="submit" className="btn btn-primary" id="renting-btn">
-                  Submit
-                </button>
-              </div>
+                  <button type="submit" className="btn btn-primary" id="renting-btn">
+                    Submit
+                  </button>
+                </div>
               </div>
             </form>
           </div>
