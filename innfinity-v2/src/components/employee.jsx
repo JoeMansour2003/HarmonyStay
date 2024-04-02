@@ -115,7 +115,7 @@ export const Employee = (props) => {
           <div className="row">
             <div className="section-title">
               <h2>Create new Renting if user has an account</h2>
-              <p>Please fill out to complete the renting process</p>
+              <p>Please fill out this form to complete the renting process.</p>
             </div>
             <form name="renting" onSubmit={handleSubmit}>
               <div className="row">
@@ -230,7 +230,7 @@ export const Employee = (props) => {
 
           <div className="row" id="approval-box">
             <h2>Approve Renting status</h2>
-            <p>Please fill out to approve them</p>
+            <p>Please fill out this form to approve a room rental.</p>
             <form name="approval" onSubmit={handleSubmit}>
               {/* Form content goes here */}
               <div className="row">
@@ -284,7 +284,7 @@ export const Employee = (props) => {
                 </div>
                 <div className="col-md-4">
                   <div className="form-group">
-                    <label htmlFor="apporval">approval</label>
+                    <label htmlFor="apporval">Approval</label>
                     <select
                       //   type="number"
                       id="approval"
@@ -294,9 +294,9 @@ export const Employee = (props) => {
                       required
                       onChange={handleChange}
                     >
-                      <option value="">Select approval</option>
-                      <option value="approved">approved</option>
-                      <option value="pending">pending</option>
+                      <option value="">Select Approval</option>
+                      <option value="approved">Approved</option>
+                      <option value="pending">Pending</option>
                       <option value="Not approved">Not approved</option>
                     </select>
                   </div>
