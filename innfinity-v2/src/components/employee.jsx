@@ -26,7 +26,6 @@ const initialState = {
   employee_id: "",
 };
 
-
 export const Employee = (props) => {
   const [renting, setRenting] = useState([]);
   const [employeesList, setEmployeesList] = useState([]);
@@ -214,24 +213,27 @@ export const Employee = (props) => {
                   </div>
                 </div>
               </div>
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label htmlFor="date">Check-out</label>
-                    <input
-                      type="date"
-                      id="date"
-                      name="date"
-                      className="form-control"
-                      required
-                      onChange={handleChange}
-                    />
-                  </div>
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label htmlFor="date">Check-out</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    className="form-control"
+                    required
+                    onChange={handleChange}
+                  />
                 </div>
+              </div>
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </form>
             {/* TODO Load book.jsx here if the user is new */}
+            <br />
+            <br />
+            <br />
             <h2>Approve Rentening status</h2>
             <p>Please fill out to approve them</p>
           </div>

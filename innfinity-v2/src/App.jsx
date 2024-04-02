@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation";
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header } from "./components/header";
 import { About } from "./components/about";
 import { Features } from "./components/features";
@@ -13,6 +13,7 @@ import { Contact } from "./components/contact";
 import { MainLayout } from "./components/Mainlayout";
 import Admin from "./components/admin";
 import { Employee } from "./components/employee";
+import { EmployeeV2 } from "./components/employee_V2";
 import { Payment } from "./components/payment";
 import LoginPage from "./components/login";
 import Confirmation from "./components/confirmation";
@@ -48,6 +49,7 @@ const App = () => {
         {/* Admin route, not wrapped in MainLayout */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/employee" element={<Employee />} />
+        <Route path="/employeev2" element={<EmployeeV2 />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/confirmation" element={<Confirmation />} />
       </Routes>

@@ -13,6 +13,7 @@ const createRentingRoutes = require("./routes/createRenting");
 const getarchives = require("./routes/archives");
 const roomsByHotelRouter = require("./routes/roomsByHotel");
 const filteredhotelsRoutes = require("./routes/filteredhotels");
+const getbooking = require("./routes/getbookinginfo");
 const bookingRoutes = require("./routes/booking");
 const app = express();
 
@@ -21,6 +22,7 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 app.use("/api/employees", updateemployeeRoutes);
+app.use("/api/bookingid", getbooking);
 app.use("/api/hotels", hotelRoutes);
 app.use("/api/login", loginRoutes);
 app.use("/api/renting", rentingRoutes);
