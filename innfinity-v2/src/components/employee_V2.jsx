@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   booking_id: "",
@@ -12,6 +13,7 @@ export const EmployeeV2 = () => {
   const [formData, setFormData] = useState(initialState);
   const [employeesList, setEmployeesList] = useState([]);
   const [otherData, setOtherData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -40,6 +42,7 @@ export const EmployeeV2 = () => {
       [name]: value,
     }));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -68,56 +71,98 @@ export const EmployeeV2 = () => {
   };
 
   return (
-    <div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Booking:</label>
-          <select name="booking_id" onChange={handleChange} required>
-            <option value="">Select a booking</option>
-            {bookingList.map((booking) => (
-              <option
-                key={booking.booking_number}
-                value={booking.booking_number}
-              >
-                room number: {booking.room_number}, checkin_date:{" "}
-                {booking.checkin_date}, checkout_date: {booking.checkout_date}
-              </option>
-            ))}
-          </select>
+    <div id="employee">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="container">
+        <div className="col-md-8">
+          <div className="row">
+            <div className="section-title">
+              <h2>Employee Page</h2>
+            </div>
+            <form name="employeeForm" onSubmit={handleSubmit}>
+              <div className="row">
+                <h4>Approving Rental</h4>{" "}
+                <p>
+                  Please fill out the form below to create a new renting record.
+                </p>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="booking_id">Booking:</label>
+                    <select
+                      id="booking_id"
+                      name="booking_id"
+                      className="form-control"
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select a booking</option>
+                      {bookingList.map((booking) => (
+                        <option
+                          key={booking.booking_number}
+                          value={booking.booking_number}
+                        >
+                          room number: {booking.room_number}, checkin_date:{" "}
+                          {booking.checkin_date}, checkout_date:{" "}
+                          {booking.checkout_date}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="payment_status">Payment Status:</label>
+                    <select
+                      id="payment_status"
+                      name="payment_status"
+                      className="form-control"
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select a status</option>
+                      <option value="approved">Approved</option>
+                      <option value="denied">Denied</option>
+                      <option value="pending">Pending</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="employee_id">Employee:</label>
+                    <select
+                      id="employee_id"
+                      name="employee_id"
+                      className="form-control"
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select an employee</option>
+                      {employeesList.map((employee) => (
+                        <option
+                          key={employee.employeeid}
+                          value={employee.employeeid}
+                        >
+                          {employee.full_name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" className="btn btn-custom btn-lg">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-        <div>
-          <label>Payment Status:</label>
-          <select name="payment_status" onChange={handleChange} required>
-            <option value="">Select a status</option>
-            <option value="approved">Approved</option>
-            <option value="denied">Denied</option>
-            <option value="pending">Pending</option>
-          </select>
-        </div>
-        <div>
-          <label>Employee:</label>
-          <select name="employee_id" onChange={handleChange} required>
-            <option value="">Select an employee</option>
-            {employeesList.map((employee) => (
-              <option key={employee.employeeid} value={employee.employeeid}>
-                {employee.full_name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      </div>
     </div>
   );
 };
+
+export default EmployeeV2;
