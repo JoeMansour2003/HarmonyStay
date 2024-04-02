@@ -1,0 +1,33 @@
+#renting{
+    margin-top: 100px;
+}
+
+#renting .section-title {
+    margin-bottom: 0px;
+}
+
+#renting label{
+    color: rgb(15, 24, 10);
+}
+
+#renting-btn{
+    margin-top: 20px;
+    background-color: #4e8d61;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+#renting-btn:hover{
+    background-color: #54a06b;
+}
+
+#renting #book{
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#approval-box{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

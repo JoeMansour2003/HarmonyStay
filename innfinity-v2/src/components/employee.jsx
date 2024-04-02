@@ -1,6 +1,8 @@
 import emailjs from "emailjs-com";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Book from "./book";
+import './employeeportal.css';
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -109,22 +111,13 @@ export const Employee = (props) => {
   return (
     <div id="renting">
       <div className="container">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="row">
             <div className="section-title">
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <h2>Create new Rentening if user has an account</h2>
-              <p>Please fill out to complete the rentening process</p>
+              <h2>Create new Renting if user has an account</h2>
+              <p>Please fill out to complete the renting process</p>
             </div>
             <form name="renting" onSubmit={handleSubmit}>
-              {/* Form content goes here */}
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">
@@ -176,7 +169,7 @@ export const Employee = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
-                    <label htmlFor="room_number">room_number</label>
+                    <label htmlFor="room_number">Room Number</label>
                     <select
                       //   type="number"
                       id="room_number"
@@ -212,126 +205,123 @@ export const Employee = (props) => {
                     />
                   </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="date">Check-out</label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="date">Check-out</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      className="form-control"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
+                <div className="col-md-6">
+                  <button type="submit" className="btn btn-primary" id="renting-btn">
+                    Submit
+                  </button></div>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
             </form>
-            {/* TODO Load book.jsx here if the user is new */}
-            <br />
-            <br />
-            <br />
-            <h2>Approve Rentening status</h2>
-            <p>Please fill out to approve them</p>
+            <Book />
+
           </div>
-          <form name="approval" onSubmit={handleSubmit}>
-            {/* Form content goes here */}
-            <div className="row">
-              <div className="form-group">
-                <label htmlFor="Booking_info">Booking info</label>
-                <select
-                  //   type="text"
-                  id="booking_info"
-                  name="booking_info"
-                  className="form-control"
-                  //   placeholder="Select Empolyee"
-                  required
-                  onChange={handleChange}
-                >
-                  <option value="">Select Booking</option>
-                  {bookingList.map((booking) => (
-                    <option
-                      key={booking.booking_number}
-                      value={booking.booking_number}
-                    >
-                      room number: {booking.room_number}, checkin_date:{" "}
-                      {booking.checkin_date}, checkout_date:{" "}
-                      {booking.checkout_date}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="Employee_id">Employee</label>
+
+          <div className="row" id="approval-box">
+            <h2>Approve Renting status</h2>
+            <p>Please fill out to approve them</p>
+            <form name="approval" onSubmit={handleSubmit}>
+              {/* Form content goes here */}
+              <div className="row">
+                <div className="col-md-6">
+                  <label htmlFor="Booking_info">Booking info</label>
                   <select
                     //   type="text"
-                    id="Employee_id"
-                    name="Employee_id"
+                    id="booking_info"
+                    name="booking_info"
                     className="form-control"
-                    //   placeholder="Customer ID"
+                    //   placeholder="Select Empolyee"
                     required
                     onChange={handleChange}
                   >
-                    <option value="">Select Employee</option>
-                    {employeesList.map((employee) => (
+                    <option value="">Select Booking</option>
+                    {bookingList.map((booking) => (
                       <option
-                        key={employee.employeeid}
-                        value={employee.employeeid}
+                        key={booking.booking_number}
+                        value={booking.booking_number}
                       >
-                        {employee.full_name}
+                        room number: {booking.room_number}, checkin_date:{" "}
+                        {booking.checkin_date}, checkout_date:{" "}
+                        {booking.checkout_date}
                       </option>
                     ))}
                   </select>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="apporval">approval</label>
-                  <select
-                    //   type="number"
-                    id="approval"
-                    name="approval"
-                    className="form-control"
-                    //   placeholder="Customer ID"
-                    required
-                    onChange={handleChange}
-                  >
-                    <option value="">Select approval</option>
-                    <option value="approved">approved</option>
-                    <option value="pending">pending</option>
-                    <option value="Not approved">Not approved</option>
-                  </select>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="Employee_id">Employee</label>
+                    <select
+                      //   type="text"
+                      id="Employee_id"
+                      name="Employee_id"
+                      className="form-control"
+                      //   placeholder="Customer ID"
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Select Employee</option>
+                      {employeesList.map((employee) => (
+                        <option
+                          key={employee.employeeid}
+                          value={employee.employeeid}
+                        >
+                          {employee.full_name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="date">Date</label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    className="form-control"
-                    required
-                    onChange={handleChange}
-                  />
+                <div className="col-md-4">
+                  <div className="form-group">
+                    <label htmlFor="apporval">approval</label>
+                    <select
+                      //   type="number"
+                      id="approval"
+                      name="approval"
+                      className="form-control"
+                      //   placeholder="Customer ID"
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Select approval</option>
+                      <option value="approved">approved</option>
+                      <option value="pending">pending</option>
+                      <option value="Not approved">Not approved</option>
+                    </select>
+                  </div>
                 </div>
+                <div className="col-md-4">
+                  <div className="form-group">
+                    <label htmlFor="date">Date</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      className="form-control"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="col-md-4">
+                <button type="submit" className="btn btn-primary" id="renting-btn">
+                  Submit
+                </button>
               </div>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </form>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
