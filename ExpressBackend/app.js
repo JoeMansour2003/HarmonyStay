@@ -15,6 +15,8 @@ const roomsByHotelRouter = require("./routes/roomsByHotel");
 const filteredhotelsRoutes = require("./routes/filteredhotels");
 const getbooking = require("./routes/getbookinginfo");
 const bookingRoutes = require("./routes/booking");
+const archiveRoutes = require('./routes/archivebookings');
+const getbookingsRouter = require("./routes/getbookings");
 const app = express();
 
 require("dotenv").config();
@@ -37,6 +39,9 @@ app.use("/api/hotels", roomsByHotelRouter);
 app.use("/api/archives", getarchives);
 app.use("/api/filteredhotels", filteredhotelsRoutes);
 app.use("/api/booking", bookingRoutes);
+app.use('/api/archive/:bookingId/:rentingId', archiveRoutes);
+app.use("/api/getbookings", getbookingsRouter);
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

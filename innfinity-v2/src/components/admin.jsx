@@ -92,6 +92,9 @@ const Admin = () => {
   return (
     <div className="content">
       <h1>Admin Page</h1>
+      <a href="/archives" className="btn btn-custom btn-lg">
+                Archives
+              </a>
       {editingEmployeeId ? (
         <form onSubmit={handleEditFormSubmit} className="edit-form">
           <input

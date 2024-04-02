@@ -15,8 +15,10 @@ import Admin from "./components/admin";
 import { Employee } from "./components/employee";
 import { EmployeeV2 } from "./components/employee_V2";
 import { Payment } from "./components/payment";
+import { ArchivesPage } from "./components/archives";
 import LoginPage from "./components/login";
 import Confirmation from "./components/confirmation";
+import { BookingPage} from "./components/viewbookings";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -52,6 +54,8 @@ const App = () => {
         <Route path="/employeev2" element={<EmployeeV2 />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/archives" element={<ArchivesPage />} />
+        <Route path="/viewbookings" element={<BookingPage />} />
       </Routes>
     </Router>
   );

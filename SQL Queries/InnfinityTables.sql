@@ -1,7 +1,7 @@
 
 CREATE TYPE capacity_type AS ENUM ('Single', 'Double', 'Luxury');
 CREATE TYPE view_type AS ENUM ('Sea', 'Mountain');
-CREATE TYPE payment_status_type AS ENUM ('Processing', 'Pending payment', 'Paid');
+
 
 CREATE TABLE Chain (
     name VARCHAR(255) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Customer (
     address_street_name VARCHAR(255),
     city VARCHAR(255),
     province VARCHAR(255),
-    ZIP INT,
+    ZIP CHAR(6),
     registration_date DATE
 );
 
@@ -90,7 +90,7 @@ CREATE TABLE Renting (
     Customer_id INT,
     room_number INT,
     renting_date DATE,
-    payment_status payment_status_type,
+    payment_status VARCHAR(255),
     employee_id INT,
     FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),
     FOREIGN KEY (room_number) REFERENCES HotelRoom(room_number),
@@ -99,7 +99,7 @@ CREATE TABLE Renting (
 
 
 CREATE TABLE Archives (
-    archive_id INT PRIMARY KEY,
+    archive_id SERIAL INT PRIMARY KEY,
     booking_number INT,
     renting_id INT,
     FOREIGN KEY (booking_number) REFERENCES Booking(booking_number),
@@ -152,3 +152,9 @@ CREATE SEQUENCE booking_number_seq;
 
 ALTER TABLE public.booking
 ALTER COLUMN booking_number SET DEFAULT nextval('booking_number_seq');
+
+
+CREATE SEQUENCE archives_archive_id_seq;
+
+ALTER TABLE public.archives
+ALTER COLUMN archive_id SET DEFAULT nextval('archives_archive_id_seq');

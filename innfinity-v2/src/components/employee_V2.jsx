@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import './employeeportal.css';
 import Book from "./book";
 
@@ -15,7 +15,7 @@ export const EmployeeV2 = () => {
   const [formData, setFormData] = useState(initialState);
   const [employeesList, setEmployeesList] = useState([]);
   const [otherData, setOtherData] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -79,6 +79,9 @@ export const EmployeeV2 = () => {
           <div className="row">
             <div className="section-title">
               <h2>Employee Page</h2>
+              <a href="/viewbookings" className="btn btn-custom btn-lg">
+                View Bookings
+              </a>
             </div>
             <form name="employeeForm" onSubmit={handleSubmit}>
               <div className="row">

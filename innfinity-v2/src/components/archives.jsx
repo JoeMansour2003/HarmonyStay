@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './archives.css';
 
-const ArchivesPage = () => {
+export const ArchivesPage = () => {
     const [archives, setArchives] = useState([]);
 
     useEffect(() => {

@@ -91,7 +91,6 @@ export const Book = () => {
       );
 
       const customer_id = customerResponse.data.customer_id;
-      
 
       const bookingData = {
         ...formData,
@@ -239,7 +238,8 @@ export const Book = () => {
                         name="ZIP"
                         className="form-control"
                         placeholder="Postal Code"
-                        pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d"
+                        pattern="[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d"
+                        title="Postal Code must be in the format A1A 1A1 or A1A1A1"
                         required
                         onChange={handleChange}
                       />

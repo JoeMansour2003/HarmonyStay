@@ -1,4 +1,3 @@
-import emailjs from "emailjs-com";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Book from "./book";
@@ -29,7 +28,7 @@ const initialState = {
 };
 
 export const Employee = (props) => {
-  const [renting, setRenting] = useState([]);
+  const [setRenting] = useState([]);
   const [employeesList, setEmployeesList] = useState([]);
   const [customerList, setCustomerList] = useState([]);
   const [roomNumberList, setRoomNumber] = useState([]);
